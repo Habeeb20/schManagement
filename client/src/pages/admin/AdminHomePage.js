@@ -11,7 +11,9 @@ import { useEffect } from 'react';
 import { getAllSclasses } from '../../redux/sclassRelated/sclassHandle';
 import { getAllStudents } from '../../redux/studentRelated/studentHandle';
 import { getAllTeachers } from '../../redux/teacherRelated/teacherHandle';
-
+import img1 from '../../assets/classrm.webp'
+import img2 from '../../assets/student.webp'
+import img3 from '../../assets/student2.webp'
 const AdminHomePage = () => {
     const dispatch = useDispatch();
     const { studentsList } = useSelector((state) => state.student);
