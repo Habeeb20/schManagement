@@ -14,6 +14,7 @@ import { getAllTeachers } from '../../redux/teacherRelated/teacherHandle';
 import img1 from '../../assets/classrm.webp'
 import img2 from '../../assets/student.webp'
 import img3 from '../../assets/student2.webp'
+import { Link } from 'react-router-dom';
 const AdminHomePage = () => {
     const dispatch = useDispatch();
     const { studentsList } = useSelector((state) => state.student);
@@ -80,6 +81,8 @@ const AdminHomePage = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Link to='/financeauth'><button>finance</button></Link>
+            <Link to='https://eschoolsapp.onrender.com'><button>home</button></Link>
         </>
     );
 };

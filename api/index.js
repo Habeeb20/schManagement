@@ -47,6 +47,9 @@ const path = require('path');
 
 const app = express();
 const Routes = require("./routes/route.js");
+const authRouter = require("./routes/finance/auth.js");
+const expenditureRouter = require("./routes/finance/expenditureRoute.js");
+const studentRouter = require("./routes/finance/studentRoute.js");
 
 dotenv.config();
 
@@ -67,7 +70,9 @@ mongoose
 
 // Routes
 app.use('/', Routes);
-
+app.use('/', authRouter)
+app.use('/', expenditureRouter)
+app.use('/', studentRouter)
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 

@@ -41,6 +41,10 @@ import AddClass from './classRelated/AddClass';
 import ClassDetails from './classRelated/ClassDetails';
 import ShowClasses from './classRelated/ShowClasses';
 import AccountMenu from '../../components/AccountMenu';
+import Auth from '../Auth';
+import FinanceDashboard from '../FinanceDashboard';
+import FinanceStudentForm from '../FinanceStudentForm';
+import FinanceExpenditure from '../FinanceExpenditure';
 
 const AdminDashboard = () => {
     const [open, setOpen] = useState(false);
@@ -109,6 +113,13 @@ const AdminDashboard = () => {
 
                         <Route path="/Admin/addsubject/:id" element={<SubjectForm />} />
                         <Route path="/Admin/class/subject/:classID/:subjectID" element={<ViewSubject />} />
+
+
+
+                        <Route path="/financeauth" element={<Auth />} />
+                        <Route path="/financedashboard" element={<FinanceDashboard />} />
+                        <Route path="/financestudent" element={<FinanceStudentForm />} />
+                        <Route path="/financeexpenditure" element={<FinanceExpenditure />} />
 
                         <Route path="/Admin/subject/student/attendance/:studentID/:subjectID" element={<StudentAttendance situation="Subject" />} />
                         <Route path="/Admin/subject/student/marks/:studentID/:subjectID" element={<StudentExamMarks situation="Subject" />} />
